@@ -1,18 +1,7 @@
-Botwasap v3
-
-Bayak yang baru
-Check aja sendiri
-
-|-----------------|
-
-lots of updates
-Just check it yourself 
-If you can help me to translate the bot language please chat me in whatsapp
-
-|-----------------|
+Gunakan Bot dengan benar, jangan menyalah gunakan Bot.
 
 My whatsapp
-wa.me/6282334297175
+wa.me/628991155355
 
 My Instagram
-https://Instagram.com/affis_saputro123
+https://Instagram.com/_a412r
