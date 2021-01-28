@@ -38,7 +38,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'ORG: Pengembang MelonBot;\n' 
             + 'TEL;type=CELL;type=VOICE;waid=6281220080910:+62 812-2008-0910\n' 
             + 'END:VCARD' 
-prefix = '/'
+prefix = '#'
 blocked = []   
 cr = '*DONASI JIKA INGIN BOT SELALU AKTIF*'
 
