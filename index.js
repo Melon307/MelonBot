@@ -34,17 +34,16 @@ const { removeBackgroundFromImageFile } = require('remove.bg')
 const { ind } = require('./language')
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Affis Admin\n' 
-            + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
+            + 'FN:Adji Admin\n' 
+            + 'ORG: Pengembang MelonBot;\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=6281220080910:+62 812-2008-0910\n' 
             + 'END:VCARD' 
-prefix = '#'
+prefix = '/'
 blocked = []   
-limitawal = '20'
-cr = '*BOT INI SUDAH TERVERIFIKASI*'
+cr = '*DONASI JIKA INGIN BOT SELALU AKTIF*'
 
 /******** OWNER NUMBER**********/
-const ownerNumber = ["62895710073737@s.whatsapp.net","6282334297174@s.whatsapp.net"] 
+const ownerNumber = ["628991155355@s.whatsapp.net","628991155355@s.whatsapp.net"] 
 /************************************/
 
        
@@ -287,7 +286,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `akhirnya beban group berkurang 𝟭,bye bye🥳 @${num.split('@')[0]} jasamu akan di kubur dalam²`
+				teks = `akhirnya burik out juga, bye bye🥳 @${num.split('@')[0]} jangan masuk lagi kalo belum cakep ya!`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -574,7 +573,7 @@ client.on('group-participants-update', async (anu) => {
 					aruga = body.slice(7)
 					reply(ind.wait())
 					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/toxictext?text=${aruga}`)
-					client.sendMessage(from, aruga, image, {caption: 'Nih kak', quoted: mek})
+					client.sendMessage(from, aruga, image, {caption: 'Nih Bro', quoted: mek})
 					await limitAdd(sender)
 					break
 					case 'sumery':
@@ -584,7 +583,7 @@ client.on('group-participants-update', async (anu) => {
 					aruga = body.slice(8)
 					reply(ind.wait())
 					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/sandsummery?text=${aruga}`)
-					client.sendMessage(from, aruga, image, {caption: 'Nih kak', quoted: mek})
+					client.sendMessage(from, aruga, image, {caption: 'Nih Bro', quoted: mek})
 					await limitAdd(sender)
 					break
 					case 'blood':
@@ -594,7 +593,7 @@ client.on('group-participants-update', async (anu) => {
 					aruga = body.slice(7)
 					reply(ind.wait())
 					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/bloodtext?text=${aruga}`)
-					client.sendMessage(from, aruga, image, {caption: 'Nih kak', quoted: mek})
+					client.sendMessage(from, aruga, image, {caption: 'Nih Bro', quoted: mek})
 					await limitAdd(sender)
 					break
 					case 'firework':
@@ -604,7 +603,7 @@ client.on('group-participants-update', async (anu) => {
 					arugazzz = body.slice(10)
 					reply(ind.wait())
 					arugazzz = await getBuffer(`https://arugaz.my.id/api/textpro/firework?text=${arugazzz}`)
-					client.sendMessage(from, arugazzz, image, {caption: 'Nih kak', quoted: mek})
+					client.sendMessage(from, arugazzz, image, {caption: 'Nih Bro', quoted: mek})
 					await limitAdd(sender)
 					break
 					case 'lava':
@@ -614,7 +613,7 @@ client.on('group-participants-update', async (anu) => {
 					aruga = body.slice(6)
 					reply(ind.wait())
 					aruga = await getBuffer(`https://arugaz.my.id/api/textpro/lavatext?text=${aruga}`)
-					client.sendMessage(from, aruga, image, {caption: 'Nih kak', quoted: mek})
+					client.sendMessage(from, aruga, image, {caption: 'Nih Bro', quoted: mek})
 					await limitAdd(sender)
 					break
                 case '1cak':
@@ -625,7 +624,7 @@ client.on('group-participants-update', async (anu) => {
 					    if (!isNsfw) return reply(ind.nsfwoff())
 						res = await fetchJson(`https://st4rz.herokuapp.com/api/1cak`, {method: 'get'})
 						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni anjim'})
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni jelek'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply(ind.wrongf())
@@ -693,7 +692,7 @@ client.on('group-participants-update', async (anu) => {
 					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(enmedia)
 					await client.updateProfilePicture(botNumber, media)
-					reply('Makasih profil barunya😗')
+					reply('Makasih profil barunya😍')
 					break 
 					case 'brainly':
 					if (!isRegistered) return reply(ind.noregis())
@@ -764,7 +763,7 @@ client.on('group-participants-update', async (anu) => {
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
 					for (let mem of groupMembers) {
-						teks += `*😘* ${mem.jid.split('@')[0]}\n`
+						teks += `*BISMILLAH* ${mem.jid.split('@')[0]}\n`
 						members_id.push(mem.jid)
 					}
 					mentions(teks, members_id, true)
@@ -781,7 +780,7 @@ client.on('group-participants-update', async (anu) => {
 					case 'grouplist':
 					if (!isRegistered) return reply(ind.noregis())
 					client.updatePresence(from, Presence.composing) 
-					teks = `\`\`\`Ini adalah list group XPTN BOT :\n\n\`\`\``
+					teks = `\`\`\`Ini adalah list group MELON BOT :\n\n\`\`\``
 					no = 0
 					for (let hehehe of groupId) {
 						no += 1
@@ -1312,13 +1311,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝘆𝗮𝗵𝗵 𝗷𝗮??𝗮𝘁𝗮𝗻 𝗮𝗱𝗺𝗶𝗻 𝗸𝗮𝗺𝘂 𝘀𝘂𝗱𝗮𝗵 𝗱𝗶 𝗰𝗼𝗽𝗼𝘁🏃 :\n`
+							teks += `YAHH, SI JELEK DI UN-ADMIN :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					} else {
-						mentions(`𝘆𝗮𝗵𝗵 @${mentioned[0].split('@')[0]} 𝗷𝗮𝗯𝗮𝘁𝗮𝗻 𝗮𝗱𝗺𝗶𝗻 𝗸𝗮𝗺𝘂 𝘀𝘂𝗱𝗮𝗵 𝗱𝗶 𝗰𝗼𝗽𝗼𝘁🏃`, mentioned, true)
+						mentions(`YAHH @${mentioned[0].split('@')[0]} SI JELEK DI UN-ADMIN`, mentioned, true)
 						client.groupDemoteAdmin(from, mentioned)
 					}
 					break
@@ -1331,13 +1330,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝗦𝗲𝗹𝗮𝗺𝗮𝘁🥳 𝗮𝗻𝗱𝗮 𝗻𝗮𝗶𝗸 𝗺𝗲𝗻𝗷𝗮𝗱𝗶 𝗮𝗱𝗺𝗶𝗻 𝗴𝗿𝗼𝘂𝗽 (+_+) :\n`
+							teks += `CIEE SI JELEK JADI ADMIN HAHAHA (+_+) :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					} else {
-						mentions(`𝗦𝗲𝗹𝗮𝗺𝗮𝘁🥳 @${mentioned[0].split('@')[0]} ??𝗻𝗱𝗮 ??𝗮𝗶𝗸 𝗺????𝗷??𝗱𝗶 𝗮??𝗺𝗶𝗻 𝗴𝗿𝗼𝘂?? (+_+)`, mentioned, true)
+						mentions(`CIEE @${mentioned[0].split('@')[0]} SI JELEK JADI ADMIN HAHAHA (+_+)`, mentioned, true)
 						client.groupMakeAdmin(from, mentioned)
 					}
 					break	
@@ -1350,13 +1349,13 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 🏃 :\n`
+							teks += `MAMPUS SI BURIQ DI KICK, MAKANYA CAKEP TOLOL🏃 :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`𝗔𝘀𝗲𝗸 𝗱𝗮𝗽𝗮𝘁 𝗺𝗮𝗸𝗮𝗻𝗮𝗻,𝗼𝘁𝘄 𝗸𝗶𝗰𝗸 @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
+						mentions(`MAMPUS SI BURIQ DI KICK, MAKANYA CAKEP TOLOL @${mentioned[0].split('@')[0]} 🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
